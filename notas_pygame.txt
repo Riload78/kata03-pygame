@@ -1,0 +1,25 @@
+Hay que importar la libreria
+    import pygame
+
+Se inicializa
+    pygame.init()
+
+Se determina la pantalla
+    pantalla = pygame.display.set.mode((800,600))
+
+Titulo de la ventana
+    pygame.display.set_caption("Hola Mundo")
+
+
+Montar el bucle infinito que hacer el fotograma
+
+    while game_over == False:
+        ## vaciar el buffer de eventos
+        for evento in pygame.event.get():
+            if evento.type == pygame.QUIT:
+                game_over = True
+            
+        # color de pantalla
+        pantalla.fill((0,0,255))
+        # mostrar en pantalla
+        pygame.display.flip()
